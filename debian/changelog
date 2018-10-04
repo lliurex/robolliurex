@@ -1,3 +1,9 @@
+robolliurex (1.2.13) bionic; urgency=medium
+
+  * Initial release for bionic
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 04 Oct 2018 14:46:50 +0200
+
 robolliurex (1.2.3) xenial; urgency=medium
 
   * Removed deprecated locale
