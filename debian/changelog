@@ -1,0 +1,195 @@
+robolliurex (1.2.3) xenial; urgency=medium
+
+  * Removed deprecated locale
+
+ -- Juanma Navarro Mañez <juanma1980@gmail.com>  Thu, 22 Jun 2017 09:14:02 +0200
+
+robolliurex (1.2.2) xenial; urgency=medium
+
+  * Added metainfo 
+
+ -- Juanma Navarro Mañez <juanma1980@gmail.com>  Wed, 10 May 2017 12:42:04 +0200
+
+robolliurex (1.2.1) xenial; urgency=medium
+
+  * Added proper udev rules to fix device permissions
+
+ -- Enrique Medina Gremaldos <quiqueiii@gmail.com>  Fri, 21 Apr 2017 13:50:44 +0200
+
+robolliurex (1.2.0) xenial; urgency=medium
+
+  * Using first available legousbtower[n] device found. Need a patched nqc for that.
+
+ -- Enrique Medina Gremaldos <quiqueiii@gmail.com>  Fri, 07 Apr 2017 14:55:20 +0200
+
+robolliurex (1.1.5) xenial; urgency=medium
+
+  * First relase to xenial
+
+ -- Juan Ramon Pelegrina <alviboi@gmail.com>  Thu, 23 Mar 2017 10:17:03 +0100
+
+robolliurex (1.1.4) xenial; urgency=medium
+
+  * First relase to xenial
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 29 Jan 2016 12:17:03 +0100
+
+robolliurex (1.1.1) trusty; urgency=medium
+
+  * Updated build depends
+
+ -- Enrique Medina Gremaldos <quiqueiii@gmail.com>  Fri, 30 Oct 2015 12:52:35 +0100
+
+robolliurex (1.1.0) trusty; urgency=low
+
+  * Refactored code, using new lgi Application class
+  * Improved code readibility
+
+ -- Enrique Medina Gremaldos <quiqueiii@gmail.com>  Fri, 30 Oct 2015 12:19:16 +0100
+
+robolliurex (1.0.16) trusty; urgency=low
+
+  * Added missing translations
+
+ -- Enrique Medina Gremaldos <quiqueiii@gmail.com>  Tue, 27 Oct 2015 12:26:30 +0100
+
+robolliurex (1.0.15) trusty; urgency=low
+
+  * missing cmake build dep
+
+ -- Enrique Medina Gremaldos <quiqueiii@gmail.com>  Mon, 27 Apr 2015 15:46:35 +0200
+
+robolliurex (1.0.14) trusty; urgency=low
+
+  * Upload to trusty
+
+ -- Enrique Medina Gremaldos <quiqueiii@gmail.com>  Mon, 27 Apr 2015 13:46:56 +0200
+
+robolliurex (1.0.13) precise; urgency=medium
+
+  * Fixed desktop dropping in the wrong place
+  * Added missing desktop icon
+
+ -- Enrique Medina Gremaldos <quiqueiii@gmail.com>  Fri, 23 Jan 2015 09:32:22 +0100
+
+robolliurex (1.0.12) precise; urgency=low
+
+  * Labels are now multilined
+  * Added drag n drop support
+  * Some c++11 code migration
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Mon, 14 Jul 2014 10:36:31 +0200
+
+robolliurex (1.0.11) precise; urgency=low
+
+  * Platinum release
+  * Updated with last lsf and lgi changes
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Thu, 26 Jun 2014 17:55:40 +0200
+
+robolliurex (1.0.10) precise; urgency=low
+
+  * Fixed light sensor in pilot4, not working as expected
+  * Fixed input slot moving to 1 whenever another type of sensor is selected
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Wed, 12 Mar 2014 11:16:24 +0100
+
+robolliurex (1.0.9) precise; urgency=low
+
+  * Fixed input slots stuck in CPU mode
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Tue, 11 Mar 2014 13:21:32 +0100
+
+robolliurex (1.0.8) precise; urgency=low
+
+  * Fixed bug with press sensor behaviour
+  * Fixed bug with sensor input slot after being loaded from a file
+  * Fixed bug with pilot save auto-extension 
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Thu, 06 Mar 2014 11:58:01 +0100
+
+robolliurex (1.0.7) precise; urgency=low
+
+  * Fixed bug using light slots (code generation was missing)
+  * Added version label on bottom left corner
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Fri, 28 Feb 2014 10:02:04 +0100
+
+robolliurex (1.0.6) precise; urgency=high
+
+  * Fixed segfault downloading firmware
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Wed, 12 Feb 2014 12:08:05 +0100
+
+robolliurex (1.0.5) precise; urgency=low
+
+  * Fixed segfault due to invalid firmware path 
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Wed, 12 Feb 2014 11:26:06 +0100
+
+robolliurex (1.0.4) precise; urgency=low
+
+  * Fixed segfault testing communications
+  * Fixed desktop missing tryexec
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Thu, 23 Jan 2014 11:34:15 +0100
+
+robolliurex (1.0.3) precise; urgency=low
+
+  * Fixed blank screen when cancelling file dialogs
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Mon, 13 Jan 2014 12:15:15 +0100
+
+robolliurex (1.0.2) precise; urgency=high
+
+  * Added udev rule to allow unprovileged users to run lego usb
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Mon, 13 Jan 2014 09:17:50 +0100
+
+robolliurex (1.0.1) precise; urgency=high
+
+  * Added missing pot
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Fri, 10 Jan 2014 13:18:30 +0100
+
+robolliurex (1.0) precise; urgency=high
+
+  * Fixed with suggestions from IES2 Paiporta
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Fri, 10 Jan 2014 11:47:46 +0100
+
+robolliurex (1.0~alpha5) precise; urgency=high
+
+  * Missing llxdev build dep 
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Tue, 17 Dec 2013 11:29:31 +0100
+
+robolliurex (1.0~alpha4) precise; urgency=high
+
+  * Added lliurex package utils
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Tue, 17 Dec 2013 10:49:24 +0100
+
+robolliurex (1.0~alpha3) precise; urgency=high
+
+  * Fixing packaging
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Tue, 17 Dec 2013 09:18:32 +0100
+
+robolliurex (1.0~alpha2) precise; urgency=high
+
+  * Missing build dep
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Mon, 16 Dec 2013 14:49:55 +0100
+
+robolliurex (1.0~alpha1) precise; urgency=high
+
+  * Initial alpha (almost beta) release
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Mon, 16 Dec 2013 14:42:05 +0100
+
+robolliurex (1.0) precise; urgency=low
+
+  * Initial release.
+
+ -- Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>  Mon, 09 Dec 2013 13:00:07 +0100
