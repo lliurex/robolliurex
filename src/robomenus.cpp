@@ -516,9 +516,12 @@ void DropScreen::OnDndDrop(DndDropEvent * event)
 		
 		if(is_valid)
 		{
-			/* cool, it isn't? */
-			pilot_type=3+('3'-header[2]);
-							
+			
+			pilot_type=header[2]-'0';
+			
+			clog<<"* pilot_type:"<<pilot_type<<endl;
+			clog<<"* header[2]:"<<header[2]<<endl;
+			
 			lbl1->SetText(T("It seems a valid Robolliurex file"));
 			lbl1->Init(RoboCore::GetCore()->window->cairo);
 			
