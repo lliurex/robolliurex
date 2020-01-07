@@ -36,7 +36,6 @@ MainScreen::MainScreen(): RoboMenu("Start",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTR
 
 void MainScreen::OnDestroy(DestroyEvent * event)
 {
-	cout<<"MainScreen::Destroy"<<endl;
 	Application::Quit();
 }
 
@@ -428,7 +427,7 @@ void DropScreen::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	if(widget==btn1)
 	{
 					
-		cout<<"Trying to Load "<<filename<<" pilot "<<pilot_type<<endl;
+		clog<<"Trying to Load "<<filename<<" pilot "<<pilot_type<<endl;
 		
 		Message * msg = new Message(RBW_MSG_PILOT_LOAD);
 		msg->data["path"]=new MessageDataString(filename);
@@ -484,7 +483,7 @@ void DropScreen::OnDndDrop(DndDropEvent * event)
 	
 		
 		
-	cout<<"uri:["<<uri<<"]"<<endl;
+	clog<<"uri:["<<uri<<"]"<<endl;
 	
 	filename=g_filename_from_uri(uri.c_str(),nullptr,nullptr);
 	
@@ -493,7 +492,7 @@ void DropScreen::OnDndDrop(DndDropEvent * event)
 	if(filename!=nullptr)
 	{
 		
-		cout<<"filename:["<<filename<<"]"<<endl;
+		clog<<"filename:["<<filename<<"]"<<endl;
 		/* trying to guess whenever is a valid file */
 		fstream fs;
 		fs.open (filename, std::fstream::in);
@@ -516,11 +515,7 @@ void DropScreen::OnDndDrop(DndDropEvent * event)
 		
 		if(is_valid)
 		{
-			
 			pilot_type=header[2]-'0';
-			
-			clog<<"* pilot_type:"<<pilot_type<<endl;
-			clog<<"* header[2]:"<<header[2]<<endl;
 			
 			lbl1->SetText(T("It seems a valid Robolliurex file"));
 			lbl1->Init(RoboCore::GetCore()->window->cairo);
@@ -537,7 +532,7 @@ void DropScreen::OnDndDrop(DndDropEvent * event)
 	}
 	else
 	{
-		cout<<"Failed to parse uri"<<endl;
+		clog<<"Failed to parse uri"<<endl;
 		btn1->Enable(false);
 	}
 			

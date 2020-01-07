@@ -592,7 +592,7 @@ void PilotLoad(GtkDialog * dialog,gint r_id,gpointer data)
 	if(r_id==GTK_RESPONSE_ACCEPT)
 	{
 		char * filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (dialog));
-		cout<<"Loading "<<filename<<endl;
+		clog<<"Loading "<<filename<<endl;
 		string path(filename);		
 		g_free(filename);
 		
@@ -632,7 +632,7 @@ void PilotSave(GtkDialog * dialog,gint r_id,gpointer data)
 		else
 		{
 			string extension=base_name.substr(base_name.length()-4,string::npos);
-			cout<<"extension: "<<extension<<endl;
+			clog<<"extension: "<<extension<<endl;
 			if(extension!=".rbl")
 			{
 				base_name=base_name+".rbl";
@@ -640,7 +640,7 @@ void PilotSave(GtkDialog * dialog,gint r_id,gpointer data)
 		}
 		
 		string final_path=base_path+"/"+base_name;
-		cout<<"Saving "<<final_path<<endl;
+		clog<<"Saving "<<final_path<<endl;
 		
 		Message * msg = new Message(RBW_MSG_DIALOG_SAVE);
 		msg->data["path"]=new MessageDataString(final_path);
@@ -718,7 +718,7 @@ void Pilot3::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	{
 		run_single=!run_single;
 		
-		cout<<"run_single: "<<run_single<<endl;
+		clog<<"run_single: "<<run_single<<endl;
 		
 		if(run_single)
 			btn_run_mode->SetImage(RoboCore::GetCore()->rsrc->GetSurface("run_single.png"));
@@ -795,7 +795,7 @@ void Pilot3::OnMessage(Widget * widget,MessageEvent * event)
 		
 		if(pilot==3)
 		{
-			cout<<"Pilot3 Loading "<<path<<endl;
+			clog<<"Pilot3 Loading "<<path<<endl;
 			vector<int> header;
 			RoboSlot::Load(path,&slots,&header);
 			
@@ -817,7 +817,7 @@ void Pilot3::OnMessage(Widget * widget,MessageEvent * event)
 	if(event->msg->id==RBW_MSG_DIALOG_LOAD)
 	{
 		string path = ((MessageDataString *)event->msg->data["path"])->value;
-		cout<<"Pilot3 Loading "<<path<<endl;
+		clog<<"Pilot3 Loading "<<path<<endl;
 		vector<int> header;
 		RoboSlot::Load(path,&slots,&header);
 		
@@ -1217,7 +1217,7 @@ void Pilot4::OnMessage(Widget * widget,MessageEvent * event)
 		
 		if(pilot==4)
 		{
-			cout<<"Pilot4 Loading "<<path<<endl;
+			clog<<"Pilot4 Loading "<<path<<endl;
 			vector<int> header;
 			RoboSlot::Load(path,&slots,&header);
 			
@@ -1241,7 +1241,7 @@ void Pilot4::OnMessage(Widget * widget,MessageEvent * event)
 		
 				
 		string path = ((MessageDataString *)event->msg->data["path"])->value;
-		cout<<"Pilot4 Loading "<<path<<endl;
+		clog<<"Pilot4 Loading "<<path<<endl;
 		
 		vector<int> header;
 		RoboSlot::Load(path,&slots,&header);

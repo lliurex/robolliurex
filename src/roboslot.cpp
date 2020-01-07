@@ -668,7 +668,7 @@ CodeBuilder::CodeBuilder(vector<RoboSlot *> * slots,bool run_single)
 	code_stream<<"Off(OUT_C);\n";
 	code_stream<<"}";
 	
-	cout<<code_stream.str();
+	clog<<code_stream.str();
 }
 
 void CodeBuilder::Save(string path)

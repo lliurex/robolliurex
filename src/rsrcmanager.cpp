@@ -19,26 +19,26 @@ RsrcManager::RsrcManager(string path)
 	
 	files=filesystem::List(path+"/*.png");
 	
-	cout<<"* Loading resources:...";
+	clog<<"* Loading resources:...";
 	for(string file : files)
 	{
 		string name = filesystem::BaseName(file);
 		
 		surfaces[name]=cairo_image_surface_create_from_png(file.c_str());
 	}
-	cout<<"ok"<<endl;
+	clog<<"ok"<<endl;
 	
 	
 }
 
 RsrcManager::~RsrcManager()
 {
-	cout<<"* Unloading resources:...";
+	clog<<"* Unloading resources:...";
 	for(pair<string,cairo_surface_t *>iter : surfaces)
 	{
 		cairo_surface_destroy(iter.second);
 	}
-	cout<<"ok"<<endl;
+	clog<<"ok"<<endl;
 }
 
 /*!
