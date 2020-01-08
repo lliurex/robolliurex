@@ -279,7 +279,7 @@ void RoboSlot::Build(cairo_t * cairo)
 	if(mode==ROBOSLOT_MODE_NORMAL && type==ROBOSLOT_TYPE_INPUT)
 	{
 		Button * sltbtn=new Button(labels[slot]);
-		sltbtn->tag=ROBOSLOT_WIDGET_SLOT_BUTTON<<8 | 36;
+		sltbtn->tag=ROBOSLOT_WIDGET_SLOT_BUTTON<<8 | 40;
 		sltbtn->Init(cairo);
 		btn_slot=sltbtn;
 		btn->tag=ROBOSLOT_WIDGET_BUTTON<<8 | 50;
@@ -291,7 +291,7 @@ void RoboSlot::Build(cairo_t * cairo)
 	else
 	{
 		lbl=new Label(labels[slot]);
-		lbl->tag=ROBOSLOT_WIDGET_NONE<<8 | 36;
+		lbl->tag=ROBOSLOT_WIDGET_NONE<<8 | 40;
 		lbl->Init(cairo);
 		btn->tag=ROBOSLOT_WIDGET_BUTTON<<8 | 50;
 		
@@ -302,7 +302,7 @@ void RoboSlot::Build(cairo_t * cairo)
 	if(power_button && mode==ROBOSLOT_MODE_NORMAL)
 	{
 		Button * pwrbtn = new Button(powers[power]);
-		pwrbtn->tag=ROBOSLOT_WIDGET_POWER_BUTTON<<8 | 63;
+		pwrbtn->tag=ROBOSLOT_WIDGET_POWER_BUTTON<<8 | 60;
 		pwrbtn->Init(cairo);
 		btn_power=pwrbtn;
 		widgets.push_back(pwrbtn);
@@ -314,16 +314,16 @@ void RoboSlot::Build(cairo_t * cairo)
 		stringstream code_stream;
 		
 		img = new ImageButton( RoboCore::GetCore()->rsrc->GetSurface("plus.png"));
-		img->tag=ROBOSLOT_WIDGET_LIGHT_INCREASE<<8 | 61;
+		img->tag=ROBOSLOT_WIDGET_LIGHT_INCREASE<<8 | 60;
 		widgets.push_back(img);
 		code_stream<<light_value;
 		lbl = new Label(code_stream.str());
-		lbl->tag=ROBOSLOT_WIDGET_NONE<<8 | 68;
+		lbl->tag=ROBOSLOT_WIDGET_NONE<<8 | 65;
 		lbl->Init(cairo);
 		lbl_light=lbl;
 		widgets.push_back(lbl);
 		img = new ImageButton( RoboCore::GetCore()->rsrc->GetSurface("minus.png"));
-		img->tag=ROBOSLOT_WIDGET_LIGHT_DECREASE<<8 | 75;
+		img->tag=ROBOSLOT_WIDGET_LIGHT_DECREASE<<8 | 70;
 		widgets.push_back(img);
 		
 		if(clock_mode==ROBOSLOT_LIGHT_MODE_LT)
@@ -332,7 +332,7 @@ void RoboSlot::Build(cairo_t * cairo)
 			surface=RoboCore::GetCore()->rsrc->GetSurface("great_than.png");
 		
 		img = new ImageButton(surface);
-		img->tag=ROBOSLOT_WIDGET_LIGHT_MODE<<8 | 83;
+		img->tag=ROBOSLOT_WIDGET_LIGHT_MODE<<8 | 78;
 		img_light=img;
 		widgets.push_back(img);
 	}
@@ -343,16 +343,16 @@ void RoboSlot::Build(cairo_t * cairo)
 		stringstream code_stream;
 		
 		img = new ImageButton( RoboCore::GetCore()->rsrc->GetSurface("plus.png"));
-		img->tag=ROBOSLOT_WIDGET_CLOCK_INCREASE<<8 | 61;
+		img->tag=ROBOSLOT_WIDGET_CLOCK_INCREASE<<8 | 60;
 		widgets.push_back(img);
 		code_stream<<clock_value;
 		lbl = new Label(code_stream.str());
-		lbl->tag=ROBOSLOT_WIDGET_NONE<<8 | 68;
+		lbl->tag=ROBOSLOT_WIDGET_NONE<<8 | 65;
 		lbl->Init(cairo);
 		lbl_clock=lbl;
 		widgets.push_back(lbl);
 		img = new ImageButton( RoboCore::GetCore()->rsrc->GetSurface("minus.png"));
-		img->tag=ROBOSLOT_WIDGET_CLOCK_DECREASE<<8 | 75;
+		img->tag=ROBOSLOT_WIDGET_CLOCK_DECREASE<<8 | 70;
 		widgets.push_back(img);
 		
 		
@@ -363,7 +363,7 @@ void RoboSlot::Build(cairo_t * cairo)
 		
 		img = new ImageButton( surface);
 		
-		img->tag=ROBOSLOT_WIDGET_CLOCK_MODE<<8 | 83;
+		img->tag=ROBOSLOT_WIDGET_CLOCK_MODE<<8 | 78;
 		img_clock=img;
 		widgets.push_back(img);
 	}
