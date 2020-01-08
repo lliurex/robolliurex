@@ -24,7 +24,7 @@ using namespace std;
 /* 
 	************* MainWindow ************
 */
-MainWindow::MainWindow() : X11Window(800,600,0)
+MainWindow::MainWindow() : X11Window(1024,768,0)
 {
 	have_batt=false;
 	batt=0.0f;
