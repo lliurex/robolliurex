@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: robolliurex\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-14 09:04+0200\n"
+"POT-Creation-Date: 2020-01-08 13:53+0100\n"
 "PO-Revision-Date: 2013-12-13 10:16+0200\n"
 "Last-Translator: Pilar Embid Giner <embid_mar@gva.es>\n"
 "Language-Team: LliureX\n"
@@ -16,77 +16,82 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Virtaal 0.7.0\n"
 
-#: robopilot.cpp:954
-msgid " out of "
-msgstr " de"
+#: robomenus.cpp:20 robomenus.cpp:326
+msgid "Start"
+msgstr "Inicia"
 
-#: main.cpp:115 main.cpp:177 main.cpp:251 main.cpp:298 main.cpp:392
-#: robopilot.cpp:251 robopilot.cpp:380 robopilot.cpp:534 robopilot.cpp:888
-msgid "<-- Back"
-msgstr "<-- Arrere"
+#: robomenus.cpp:23
+msgid "Program"
+msgstr "Programa"
 
-#: robopilot.cpp:900
-msgid "Add"
-msgstr "Afig"
+#: robomenus.cpp:24
+msgid "Set up"
+msgstr "Configura"
 
-#: main.cpp:248
-msgid "COM 1"
-msgstr "COM 1"
-
-#: main.cpp:249
-msgid "COM 2"
-msgstr "COM 2"
-
-#: main.cpp:484
-msgid "Cancel"
-msgstr ""
-
-#: main.cpp:297
-msgid "Download"
-msgstr "Baixa"
-
-#: main.cpp:113
-msgid "Download firmware"
-msgstr "Baixa el microprogramari"
-
-#: main.cpp:481 main.cpp:537
-msgid "Drop a valid Robolliurex file"
-msgstr "Arrossegueu un fitxer Robolliurex vàlid"
-
-#: main.cpp:54
+#: robomenus.cpp:25
 msgid "Exit"
 msgstr "Ix"
 
-#: main.cpp:598
-msgid "It seems a valid Robolliurex file"
-msgstr "Sembla que és un fitxer Robolliurex vàlid"
+#: robomenus.cpp:74
+msgid "Setup"
+msgstr ""
 
-#: robopilot.cpp:909
-msgid "Left"
-msgstr "Esquerra"
+#: robomenus.cpp:77
+msgid "Select COM port"
+msgstr "Selecciona el port COM"
 
-#: main.cpp:483 robopilot.cpp:541 robopilot.cpp:675 robopilot.cpp:895
-#: robopilot.cpp:1010
-msgid "Load"
-msgstr "Carrega"
+#: robomenus.cpp:78 robomenus.cpp:237
+msgid "Download firmware"
+msgstr "Baixa el microprogramari"
 
-#: main.cpp:172
+#: robomenus.cpp:79 robomenus.cpp:319
+msgid "Test communications"
+msgstr "Comprova les comunicacions"
+
+#: robomenus.cpp:80 robomenus.cpp:136 robomenus.cpp:202 robomenus.cpp:242
+#: robomenus.cpp:327 robopilot.cpp:251 robopilot.cpp:380 robopilot.cpp:534
+#: robopilot.cpp:888
+msgid "<-- Back"
+msgstr "<-- Arrere"
+
+#: robomenus.cpp:128
+#, fuzzy
+msgid "Pilots"
+msgstr "Pilot 1"
+
+#: robomenus.cpp:131
 msgid "Pilot 1"
 msgstr "Pilot 1"
 
-#: main.cpp:173
+#: robomenus.cpp:132
 msgid "Pilot 2"
 msgstr "Pilot 2"
 
-#: main.cpp:174
+#: robomenus.cpp:133
 msgid "Pilot 3"
 msgstr "Pilot 3"
 
-#: main.cpp:175
+#: robomenus.cpp:134
 msgid "Pilot 4"
 msgstr "Pilot 4"
 
-#: main.cpp:296
+#: robomenus.cpp:195
+msgid "COM Selection"
+msgstr ""
+
+#: robomenus.cpp:199
+msgid "COM 1"
+msgstr "COM 1"
+
+#: robomenus.cpp:200
+msgid "COM 2"
+msgstr "COM 2"
+
+#: robomenus.cpp:201
+msgid "USB"
+msgstr "USB"
+
+#: robomenus.cpp:240
 msgid ""
 "Place the brick in front of the tower, turn it on and press Download to "
 "begin the firmware update"
@@ -94,7 +99,11 @@ msgstr ""
 "Col·loqueu la rajola davant de la torre, activeu-la i premeu Baixa per a "
 "començar l'actualització de microprogramari"
 
-#: main.cpp:390
+#: robomenus.cpp:241
+msgid "Download"
+msgstr "Baixa"
+
+#: robomenus.cpp:325
 msgid ""
 "Place the brick in front of the tower, turn it on and press Start to test "
 "the communications"
@@ -102,17 +111,26 @@ msgstr ""
 "Col·loqueu la rajola davant de la torre, activeu-la i premeu Inicia per a "
 "comprovar les comunicacions"
 
-#: main.cpp:52
-msgid "Program"
-msgstr "Programa"
+#: robomenus.cpp:405 robomenus.cpp:460
+msgid "Drop a valid Robolliurex file"
+msgstr "Arrossegueu un fitxer Robolliurex vàlid"
 
-#: robopilot.cpp:903
-msgid "Remove"
-msgstr "Suprimix"
+#: robomenus.cpp:407 robopilot.cpp:541 robopilot.cpp:675 robopilot.cpp:895
+#: robopilot.cpp:1010
+msgid "Load"
+msgstr "Carrega"
 
-#: robopilot.cpp:906
-msgid "Right"
-msgstr "Dreta"
+#: robomenus.cpp:408
+msgid "Cancel"
+msgstr ""
+
+#: robomenus.cpp:520
+msgid "It seems a valid Robolliurex file"
+msgstr "Sembla que és un fitxer Robolliurex vàlid"
+
+#: robomenus.cpp:526
+msgid "Unknown file format"
+msgstr "El fitxer té un format desconegut"
 
 #: robopilot.cpp:253 robopilot.cpp:382 robopilot.cpp:536 robopilot.cpp:890
 msgid "Run >"
@@ -122,34 +140,30 @@ msgstr "Executa >"
 msgid "Save"
 msgstr "Guarda"
 
-#: main.cpp:112
-msgid "Select COM port"
-msgstr "Selecciona el port COM"
+#: robopilot.cpp:900
+msgid "Add"
+msgstr "Afig"
 
-#: main.cpp:53
-msgid "Set up"
-msgstr "Configura"
+#: robopilot.cpp:903
+msgid "Remove"
+msgstr "Suprimix"
 
-#: main.cpp:391
-msgid "Start"
-msgstr "Inicia"
+#: robopilot.cpp:906
+msgid "Right"
+msgstr "Dreta"
 
-#: robopilot.cpp:954
-msgid "Step "
-msgstr "Pas"
+#: robopilot.cpp:909
+msgid "Left"
+msgstr "Esquerra"
 
 #: robopilot.cpp:912
 msgid "Step n out of m"
 msgstr "Pas n de m"
 
-#: main.cpp:114
-msgid "Test communications"
-msgstr "Comprova les comunicacions"
+#: robopilot.cpp:954
+msgid "Step "
+msgstr "Pas"
 
-#: main.cpp:250
-msgid "USB"
-msgstr "USB"
-
-#: main.cpp:604
-msgid "Unknown file format"
-msgstr "El fitxer té un format desconegut"
+#: robopilot.cpp:954
+msgid " out of "
+msgstr " de"

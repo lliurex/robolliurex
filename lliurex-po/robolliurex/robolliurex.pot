@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-14 09:04+0200\n"
+"POT-Creation-Date: 2020-01-08 13:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,98 +17,115 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: robopilot.cpp:954
-msgid " out of "
+#: robomenus.cpp:20 robomenus.cpp:326
+msgid "Start"
 msgstr ""
 
-#: main.cpp:115 main.cpp:177 main.cpp:251 main.cpp:298 main.cpp:392
-#: robopilot.cpp:251 robopilot.cpp:380 robopilot.cpp:534 robopilot.cpp:888
-msgid "<-- Back"
+#: robomenus.cpp:23
+msgid "Program"
 msgstr ""
 
-#: robopilot.cpp:900
-msgid "Add"
+#: robomenus.cpp:24
+msgid "Set up"
 msgstr ""
 
-#: main.cpp:248
-msgid "COM 1"
-msgstr ""
-
-#: main.cpp:249
-msgid "COM 2"
-msgstr ""
-
-#: main.cpp:484
-msgid "Cancel"
-msgstr ""
-
-#: main.cpp:297
-msgid "Download"
-msgstr ""
-
-#: main.cpp:113
-msgid "Download firmware"
-msgstr ""
-
-#: main.cpp:481 main.cpp:537
-msgid "Drop a valid Robolliurex file"
-msgstr ""
-
-#: main.cpp:54
+#: robomenus.cpp:25
 msgid "Exit"
 msgstr ""
 
-#: main.cpp:598
-msgid "It seems a valid Robolliurex file"
+#: robomenus.cpp:74
+msgid "Setup"
 msgstr ""
 
-#: robopilot.cpp:909
-msgid "Left"
+#: robomenus.cpp:77
+msgid "Select COM port"
 msgstr ""
 
-#: main.cpp:483 robopilot.cpp:541 robopilot.cpp:675 robopilot.cpp:895
-#: robopilot.cpp:1010
-msgid "Load"
+#: robomenus.cpp:78 robomenus.cpp:237
+msgid "Download firmware"
 msgstr ""
 
-#: main.cpp:172
+#: robomenus.cpp:79 robomenus.cpp:319
+msgid "Test communications"
+msgstr ""
+
+#: robomenus.cpp:80 robomenus.cpp:136 robomenus.cpp:202 robomenus.cpp:242
+#: robomenus.cpp:327 robopilot.cpp:251 robopilot.cpp:380 robopilot.cpp:534
+#: robopilot.cpp:888
+msgid "<-- Back"
+msgstr ""
+
+#: robomenus.cpp:128
+msgid "Pilots"
+msgstr ""
+
+#: robomenus.cpp:131
 msgid "Pilot 1"
 msgstr ""
 
-#: main.cpp:173
+#: robomenus.cpp:132
 msgid "Pilot 2"
 msgstr ""
 
-#: main.cpp:174
+#: robomenus.cpp:133
 msgid "Pilot 3"
 msgstr ""
 
-#: main.cpp:175
+#: robomenus.cpp:134
 msgid "Pilot 4"
 msgstr ""
 
-#: main.cpp:296
+#: robomenus.cpp:195
+msgid "COM Selection"
+msgstr ""
+
+#: robomenus.cpp:199
+msgid "COM 1"
+msgstr ""
+
+#: robomenus.cpp:200
+msgid "COM 2"
+msgstr ""
+
+#: robomenus.cpp:201
+msgid "USB"
+msgstr ""
+
+#: robomenus.cpp:240
 msgid ""
 "Place the brick in front of the tower, turn it on and press Download to "
 "begin the firmware update"
 msgstr ""
 
-#: main.cpp:390
+#: robomenus.cpp:241
+msgid "Download"
+msgstr ""
+
+#: robomenus.cpp:325
 msgid ""
 "Place the brick in front of the tower, turn it on and press Start to test "
 "the communications"
 msgstr ""
 
-#: main.cpp:52
-msgid "Program"
+#: robomenus.cpp:405 robomenus.cpp:460
+msgid "Drop a valid Robolliurex file"
 msgstr ""
 
-#: robopilot.cpp:903
-msgid "Remove"
+#: robomenus.cpp:407 robopilot.cpp:541 robopilot.cpp:675 robopilot.cpp:895
+#: robopilot.cpp:1010
+msgid "Load"
 msgstr ""
 
-#: robopilot.cpp:906
-msgid "Right"
+#: robomenus.cpp:408
+msgid "Cancel"
+msgstr ""
+
+#: robomenus.cpp:520
+msgid "It seems a valid Robolliurex file"
+msgstr ""
+
+#: robomenus.cpp:526
+msgid "Unknown file format"
 msgstr ""
 
 #: robopilot.cpp:253 robopilot.cpp:382 robopilot.cpp:536 robopilot.cpp:890
@@ -119,34 +136,30 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: main.cpp:112
-msgid "Select COM port"
+#: robopilot.cpp:900
+msgid "Add"
 msgstr ""
 
-#: main.cpp:53
-msgid "Set up"
+#: robopilot.cpp:903
+msgid "Remove"
 msgstr ""
 
-#: main.cpp:391
-msgid "Start"
+#: robopilot.cpp:906
+msgid "Right"
 msgstr ""
 
-#: robopilot.cpp:954
-msgid "Step "
+#: robopilot.cpp:909
+msgid "Left"
 msgstr ""
 
 #: robopilot.cpp:912
 msgid "Step n out of m"
 msgstr ""
 
-#: main.cpp:114
-msgid "Test communications"
+#: robopilot.cpp:954
+msgid "Step "
 msgstr ""
 
-#: main.cpp:250
-msgid "USB"
-msgstr ""
-
-#: main.cpp:604
-msgid "Unknown file format"
+#: robopilot.cpp:954
+msgid " out of "
 msgstr ""

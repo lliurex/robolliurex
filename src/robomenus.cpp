@@ -17,7 +17,7 @@ using namespace net::lliurex::robolliurex;
 */
 
 
-MainScreen::MainScreen(): RoboMenu("Start",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+MainScreen::MainScreen(): RoboMenu(T("Start"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	name ="main_screen";
 	btn1 = new Button(T("Program"));
@@ -71,7 +71,7 @@ void MainScreen::OnResize(ResizeEvent * event)
 	*************************** SetupScreen ***********************************
 */
 
-SetupScreen::SetupScreen() : RoboMenu("Setup",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+SetupScreen::SetupScreen() : RoboMenu(T("Setup"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	name="setup_screen";
 	btn1 = new Button(T("Select COM port"));
@@ -125,7 +125,7 @@ void SetupScreen::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	*************************** PilotMenu ***********************************
 */
 
-PilotMenu::PilotMenu(): RoboMenu("Pilots",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+PilotMenu::PilotMenu(): RoboMenu(T("Pilots"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	name="pilot_menu";
 	btn1 = new Button(T("Pilot 1"));
@@ -192,7 +192,7 @@ void PilotMenu::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	*************************** COMScreen ***********************************
 */
 
-COMScreen::COMScreen(): RoboMenu("COM Selection",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+COMScreen::COMScreen(): RoboMenu(T("COM Selection"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	value = RoboCore::GetCore()->comm_port;
 	name="com_screen";
@@ -234,7 +234,7 @@ void COMScreen::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	*************************** FirmwareScreen ***********************************
 */
 
-FirmwareScreen::FirmwareScreen(): RoboMenu("Download firmware",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+FirmwareScreen::FirmwareScreen(): RoboMenu(T("Download firmware"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	name="firmware_screen";
 	lbl1 = new Label(T("Place the brick in front of the tower, turn it on and press Download to begin the firmware update"));
@@ -316,7 +316,7 @@ void FirmwareScreen::OnMessage(Widget * widget, MessageEvent * event)
 	*************************** TestScreen ***********************************
 */
 
-TestScreen::TestScreen(): RoboMenu("Test communications",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+TestScreen::TestScreen(): RoboMenu(T("Test communications"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	
 	name="test_screen";

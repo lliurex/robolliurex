@@ -19,7 +19,7 @@ target_link_libraries(robolliurex pthread ${LGI_LIBRARIES} ${LSF_LIBRARIES} ${CA
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 #add custom lib flags
-add_definitions(-std=c++11 -O3)
+#add_definitions(-std=c++11 -O3)
 
 install(TARGETS robolliurex RUNTIME DESTINATION bin)
 
