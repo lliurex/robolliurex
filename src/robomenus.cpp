@@ -17,7 +17,7 @@ using namespace net::lliurex::robolliurex;
 */
 
 
-MainScreen::MainScreen(): RoboMenu("Start",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+MainScreen::MainScreen(): RoboMenu(T("Start"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	name ="main_screen";
 	btn1 = new Button(T("Program"));
@@ -36,7 +36,6 @@ MainScreen::MainScreen(): RoboMenu("Start",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTR
 
 void MainScreen::OnDestroy(DestroyEvent * event)
 {
-	cout<<"MainScreen::Destroy"<<endl;
 	Application::Quit();
 }
 
@@ -72,7 +71,7 @@ void MainScreen::OnResize(ResizeEvent * event)
 	*************************** SetupScreen ***********************************
 */
 
-SetupScreen::SetupScreen() : RoboMenu("Setup",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+SetupScreen::SetupScreen() : RoboMenu(T("Setup"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	name="setup_screen";
 	btn1 = new Button(T("Select COM port"));
@@ -126,7 +125,7 @@ void SetupScreen::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	*************************** PilotMenu ***********************************
 */
 
-PilotMenu::PilotMenu(): RoboMenu("Pilots",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+PilotMenu::PilotMenu(): RoboMenu(T("Pilots"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	name="pilot_menu";
 	btn1 = new Button(T("Pilot 1"));
@@ -193,7 +192,7 @@ void PilotMenu::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	*************************** COMScreen ***********************************
 */
 
-COMScreen::COMScreen(): RoboMenu("COM Selection",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+COMScreen::COMScreen(): RoboMenu(T("COM Selection"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	value = RoboCore::GetCore()->comm_port;
 	name="com_screen";
@@ -235,7 +234,7 @@ void COMScreen::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	*************************** FirmwareScreen ***********************************
 */
 
-FirmwareScreen::FirmwareScreen(): RoboMenu("Download firmware",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+FirmwareScreen::FirmwareScreen(): RoboMenu(T("Download firmware"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	name="firmware_screen";
 	lbl1 = new Label(T("Place the brick in front of the tower, turn it on and press Download to begin the firmware update"));
@@ -317,7 +316,7 @@ void FirmwareScreen::OnMessage(Widget * widget, MessageEvent * event)
 	*************************** TestScreen ***********************************
 */
 
-TestScreen::TestScreen(): RoboMenu("Test communications",0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
+TestScreen::TestScreen(): RoboMenu(T("Test communications"),0.5,0.5,RBW_POSITION_FACTOR,RBW_DISTRIBUTION_VERTICAL)
 {
 	
 	name="test_screen";
@@ -428,7 +427,7 @@ void DropScreen::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	if(widget==btn1)
 	{
 					
-		cout<<"Trying to Load "<<filename<<" pilot "<<pilot_type<<endl;
+		clog<<"Trying to Load "<<filename<<" pilot "<<pilot_type<<endl;
 		
 		Message * msg = new Message(RBW_MSG_PILOT_LOAD);
 		msg->data["path"]=new MessageDataString(filename);
@@ -484,7 +483,7 @@ void DropScreen::OnDndDrop(DndDropEvent * event)
 	
 		
 		
-	cout<<"uri:["<<uri<<"]"<<endl;
+	clog<<"uri:["<<uri<<"]"<<endl;
 	
 	filename=g_filename_from_uri(uri.c_str(),nullptr,nullptr);
 	
@@ -493,7 +492,7 @@ void DropScreen::OnDndDrop(DndDropEvent * event)
 	if(filename!=nullptr)
 	{
 		
-		cout<<"filename:["<<filename<<"]"<<endl;
+		clog<<"filename:["<<filename<<"]"<<endl;
 		/* trying to guess whenever is a valid file */
 		fstream fs;
 		fs.open (filename, std::fstream::in);
@@ -516,9 +515,8 @@ void DropScreen::OnDndDrop(DndDropEvent * event)
 		
 		if(is_valid)
 		{
-			/* cool, it isn't? */
-			pilot_type=3+('3'-header[2]);
-							
+			pilot_type=header[2]-'0';
+			
 			lbl1->SetText(T("It seems a valid Robolliurex file"));
 			lbl1->Init(RoboCore::GetCore()->window->cairo);
 			
@@ -534,7 +532,7 @@ void DropScreen::OnDndDrop(DndDropEvent * event)
 	}
 	else
 	{
-		cout<<"Failed to parse uri"<<endl;
+		clog<<"Failed to parse uri"<<endl;
 		btn1->Enable(false);
 	}
 			

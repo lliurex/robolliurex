@@ -24,7 +24,7 @@ using namespace std;
 /* 
 	************* MainWindow ************
 */
-MainWindow::MainWindow() : X11Window(800,600,0)
+MainWindow::MainWindow() : X11Window(1024,768,0)
 {
 	have_batt=false;
 	batt=0.0f;
@@ -90,7 +90,6 @@ RoboCore::RoboCore() : Application("net.lliurex.robolliurex")
 	//set outselves as main application
 	Application::Set(this);
 	
-	cout<<"RoboCore::Constructor"<<endl;
 	
 	is_firmware_downloading=false;
 	is_comm_testing=false;
@@ -131,28 +130,28 @@ void RoboCore::Init()
 	
 	if(usb_tower)
 	{
-		cout<<"* Found Lego USB tower"<<endl;
+		clog<<"* Found Lego USB tower"<<endl;
 		comm_port = RBC_PORT_USB;
 		
 		vector<string> towers = filesystem::List("/dev/usb/legousbtower*");
 		
 		if(towers.size()==0)
 		{
-			cout<<"* Warning, Lego driver is loaded but something failed!"<<endl;
+			clog<<"* Warning, Lego driver is loaded but something failed!"<<endl;
 		}
 		else
 		{
 			string usbp="usb:"+towers[0];
 			RoboCore::comm_name[comm_port]=usbp;
-			cout<<"Using tower device: "<<towers[0]<<endl;
+			clog<<"Using tower device: "<<towers[0]<<endl;
 		}
 		
 	}
 	else
 	{
-		cout<<"* Lego USB tower not found"<<endl;
+		clog<<"* Lego USB tower not found"<<endl;
 		comm_port = RBC_PORT_COM1;
-		cout<<"Using: "<<RoboCore::comm_name[comm_port]<<endl;
+		clog<<"Using: "<<RoboCore::comm_name[comm_port]<<endl;
 	}
 	
 	
@@ -187,7 +186,6 @@ void RoboCore::Init()
 
 RoboCore::~RoboCore()
 {
-	cout<<"RoboCore::Destructor"<<endl;
 	delete rsrc;
 }
 
@@ -228,7 +226,7 @@ void * auxDownloadFirmware(void * param)
 	int status;
 		
 	string cmd = string("nqc -S") + RoboCore::comm_name[RoboCore::GetCore()->comm_port] + " -firmware " + FIRM_PATH;
-	cout<<cmd<<endl;
+	clog<<cmd<<endl;
 	fp = popen( cmd.c_str(),"r" );
 	
 	if(fp==nullptr)
@@ -296,7 +294,7 @@ void * auxTestComm(void * param)
 	
 	
 	string cmd = string("nqc -S") + RoboCore::comm_name[RoboCore::GetCore()->comm_port] + " -raw 10";
-	cout<<cmd<<endl;
+	clog<<cmd<<endl;
 	fp = popen( cmd.c_str(),"r" );
 	
 	if(fp==nullptr)
@@ -374,7 +372,7 @@ void * auxDownloadProgram(void * param)
 	
 	while(fgets(buff, sizeof(buff), fp)!=nullptr)
 	{
-		cout << buff;
+		clog << buff;
 	}
 	
 	status=pclose(fp);
@@ -432,7 +430,7 @@ void * auxGetBattery(void * param)
 	
 	while(fgets(buff, sizeof(buff), fp)!=nullptr)
 	{
-		cout << buff;
+		clog << buff;
 	}
 	
 	status=pclose(fp);
@@ -452,7 +450,7 @@ void * auxGetBattery(void * param)
 	
 	batt=((high<<8) + low)/1000.0f;
 	
-	cout<<"Batt: "<<batt<<endl;
+	clog<<"Batt: "<<batt<<endl;
 	
 	Message * msg = new Message(RBW_MSG_BATTERY_STATUS);
 	msg->data["value"]=new MessageDataFloat(batt); 

@@ -368,11 +368,11 @@ Pilot2::Pilot2()
 	name="pilot_2";
 	
 	RoboSlot * slot;
-	slot = new RoboSlot(0.2f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_A,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slot = new RoboSlot(0.21f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_A,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
 	slots.push_back(slot);
-	slot = new RoboSlot(0.35f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_C,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slot = new RoboSlot(0.29f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_C,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
 	slots.push_back(slot);
-	slot = new RoboSlot(0.7f,ROBOSLOT_TYPE_INPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_INPUT_1 ,RBW_TARGET_CLOCK_1S | RBW_TARGET_CLOCK_2S | RBW_TARGET_CLOCK_4S | RBW_TARGET_CLOCK_6S | RBW_TARGET_CLOCK_8S | RBW_TARGET_CLOCK_10S | RBW_TARGET_PRESS_ACTIVE | RBW_TARGET_PRESS_RELEASE);
+	slot = new RoboSlot(0.75f,ROBOSLOT_TYPE_INPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_INPUT_1 ,RBW_TARGET_CLOCK_1S | RBW_TARGET_CLOCK_2S | RBW_TARGET_CLOCK_4S | RBW_TARGET_CLOCK_6S | RBW_TARGET_CLOCK_8S | RBW_TARGET_CLOCK_10S | RBW_TARGET_PRESS_ACTIVE | RBW_TARGET_PRESS_RELEASE);
 	slots.push_back(slot);
 	
 	lbl_title = new Label(label);
@@ -511,22 +511,22 @@ Pilot3::Pilot3()
 	RoboSlot * slot;
 	slot = new RoboSlot(0.12f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_A,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
 	slots.push_back(slot);
-	slot = new RoboSlot(0.22f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_B,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slot = new RoboSlot(0.20f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_B,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
 	slots.push_back(slot);
-	slot = new RoboSlot(0.32f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_C,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
-	slots.push_back(slot);
-	
-	slot = new RoboSlot(0.42f,ROBOSLOT_TYPE_INPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_INPUT_1 ,RBW_TARGET_CLOCK_1S | RBW_TARGET_CLOCK_2S | RBW_TARGET_CLOCK_4S | RBW_TARGET_CLOCK_6S | RBW_TARGET_CLOCK_8S | RBW_TARGET_CLOCK_10S | RBW_TARGET_PRESS_ACTIVE | RBW_TARGET_PRESS_RELEASE | RBW_TARGET_LIGHT_WHITE | RBW_TARGET_LIGHT_BLACK);
+	slot = new RoboSlot(0.28f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_C,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
 	slots.push_back(slot);
 	
-	slot = new RoboSlot(0.56f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_A,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
-	slots.push_back(slot);
-	slot = new RoboSlot(0.66f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_B,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
-	slots.push_back(slot);
-	slot = new RoboSlot(0.76f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_C,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slot = new RoboSlot(0.36f,ROBOSLOT_TYPE_INPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_INPUT_1 ,RBW_TARGET_CLOCK_1S | RBW_TARGET_CLOCK_2S | RBW_TARGET_CLOCK_4S | RBW_TARGET_CLOCK_6S | RBW_TARGET_CLOCK_8S | RBW_TARGET_CLOCK_10S | RBW_TARGET_PRESS_ACTIVE | RBW_TARGET_PRESS_RELEASE | RBW_TARGET_LIGHT_WHITE | RBW_TARGET_LIGHT_BLACK);
 	slots.push_back(slot);
 	
-	slot = new RoboSlot(0.86f,ROBOSLOT_TYPE_INPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_INPUT_1 ,RBW_TARGET_CLOCK_1S | RBW_TARGET_CLOCK_2S | RBW_TARGET_CLOCK_4S | RBW_TARGET_CLOCK_6S | RBW_TARGET_CLOCK_8S | RBW_TARGET_CLOCK_10S | RBW_TARGET_PRESS_ACTIVE | RBW_TARGET_PRESS_RELEASE | RBW_TARGET_LIGHT_WHITE | RBW_TARGET_LIGHT_BLACK);
+	slot = new RoboSlot(0.64f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_A,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slots.push_back(slot);
+	slot = new RoboSlot(0.72f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_B,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slots.push_back(slot);
+	slot = new RoboSlot(0.80f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_C,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slots.push_back(slot);
+	
+	slot = new RoboSlot(0.88f,ROBOSLOT_TYPE_INPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_INPUT_1 ,RBW_TARGET_CLOCK_1S | RBW_TARGET_CLOCK_2S | RBW_TARGET_CLOCK_4S | RBW_TARGET_CLOCK_6S | RBW_TARGET_CLOCK_8S | RBW_TARGET_CLOCK_10S | RBW_TARGET_PRESS_ACTIVE | RBW_TARGET_PRESS_RELEASE | RBW_TARGET_LIGHT_WHITE | RBW_TARGET_LIGHT_BLACK);
 	slots.push_back(slot);
 	
 	lbl_title = new Label(label);
@@ -592,7 +592,7 @@ void PilotLoad(GtkDialog * dialog,gint r_id,gpointer data)
 	if(r_id==GTK_RESPONSE_ACCEPT)
 	{
 		char * filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (dialog));
-		cout<<"Loading "<<filename<<endl;
+		clog<<"Loading "<<filename<<endl;
 		string path(filename);		
 		g_free(filename);
 		
@@ -632,7 +632,7 @@ void PilotSave(GtkDialog * dialog,gint r_id,gpointer data)
 		else
 		{
 			string extension=base_name.substr(base_name.length()-4,string::npos);
-			cout<<"extension: "<<extension<<endl;
+			clog<<"extension: "<<extension<<endl;
 			if(extension!=".rbl")
 			{
 				base_name=base_name+".rbl";
@@ -640,7 +640,7 @@ void PilotSave(GtkDialog * dialog,gint r_id,gpointer data)
 		}
 		
 		string final_path=base_path+"/"+base_name;
-		cout<<"Saving "<<final_path<<endl;
+		clog<<"Saving "<<final_path<<endl;
 		
 		Message * msg = new Message(RBW_MSG_DIALOG_SAVE);
 		msg->data["path"]=new MessageDataString(final_path);
@@ -718,7 +718,7 @@ void Pilot3::OnMouseClick(Widget * widget,MouseClickEvent * event)
 	{
 		run_single=!run_single;
 		
-		cout<<"run_single: "<<run_single<<endl;
+		clog<<"run_single: "<<run_single<<endl;
 		
 		if(run_single)
 			btn_run_mode->SetImage(RoboCore::GetCore()->rsrc->GetSurface("run_single.png"));
@@ -795,7 +795,7 @@ void Pilot3::OnMessage(Widget * widget,MessageEvent * event)
 		
 		if(pilot==3)
 		{
-			cout<<"Pilot3 Loading "<<path<<endl;
+			clog<<"Pilot3 Loading "<<path<<endl;
 			vector<int> header;
 			RoboSlot::Load(path,&slots,&header);
 			
@@ -817,7 +817,7 @@ void Pilot3::OnMessage(Widget * widget,MessageEvent * event)
 	if(event->msg->id==RBW_MSG_DIALOG_LOAD)
 	{
 		string path = ((MessageDataString *)event->msg->data["path"])->value;
-		cout<<"Pilot3 Loading "<<path<<endl;
+		clog<<"Pilot3 Loading "<<path<<endl;
 		vector<int> header;
 		RoboSlot::Load(path,&slots,&header);
 		
@@ -872,14 +872,14 @@ Pilot4::Pilot4()
 	current_step=1;
 	
 	RoboSlot * slot;
-	slot = new RoboSlot(0.20f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_A,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slot = new RoboSlot(0.17f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_A,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
 	slots.push_back(slot);
-	slot = new RoboSlot(0.32f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_B,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slot = new RoboSlot(0.25f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_B,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
 	slots.push_back(slot);
-	slot = new RoboSlot(0.44f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_C,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
+	slot = new RoboSlot(0.33f,ROBOSLOT_TYPE_OUTPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_OUTPUT_C,RBW_TARGET_LIGHT | RBW_TARGET_MOTOR_FORWARD | RBW_TARGET_MOTOR_BACKWARD | RBW_TARGET_STOP);
 	slots.push_back(slot);
 	
-	slot = new RoboSlot(0.7f,ROBOSLOT_TYPE_INPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_INPUT_1 ,RBW_TARGET_CLOCK | RBW_TARGET_LIGHT_SENSOR | RBW_TARGET_PRESS_ACTIVE | RBW_TARGET_PRESS_RELEASE);
+	slot = new RoboSlot(0.75f,ROBOSLOT_TYPE_INPUT,ROBOSLOT_MODE_NORMAL,ROBOSLOT_INPUT_1 ,RBW_TARGET_CLOCK | RBW_TARGET_LIGHT_SENSOR | RBW_TARGET_PRESS_ACTIVE | RBW_TARGET_PRESS_RELEASE);
 	slots.push_back(slot);
 		
 	
@@ -1217,7 +1217,7 @@ void Pilot4::OnMessage(Widget * widget,MessageEvent * event)
 		
 		if(pilot==4)
 		{
-			cout<<"Pilot4 Loading "<<path<<endl;
+			clog<<"Pilot4 Loading "<<path<<endl;
 			vector<int> header;
 			RoboSlot::Load(path,&slots,&header);
 			
@@ -1241,7 +1241,7 @@ void Pilot4::OnMessage(Widget * widget,MessageEvent * event)
 		
 				
 		string path = ((MessageDataString *)event->msg->data["path"])->value;
-		cout<<"Pilot4 Loading "<<path<<endl;
+		clog<<"Pilot4 Loading "<<path<<endl;
 		
 		vector<int> header;
 		RoboSlot::Load(path,&slots,&header);

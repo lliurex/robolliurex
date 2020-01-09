@@ -620,7 +620,7 @@ void RoboMenu::Draw(cairo_t * cairo)
 			my = my + widgets[n]->height+b;
 		}
 	}
-		
+	maxw=maxw+50.0f;
 	
 	if(distribution_type==RBW_DISTRIBUTION_HORITZONTAL)
 	{
