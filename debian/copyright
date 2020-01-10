@@ -3,11 +3,11 @@ Upstream-Name: robolliurex
 Upstream-Source: http://lliurex.net
 
 Files: *
-Copyright: Copyright © 2013 Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>
+Copyright: Copyright © 2020 Enrique Medina Gremaldos <quiqueiii@gmail.com>
 License: GPL-3+
 
 Files: debian/*
-Copyright: Copyright © 2013 Enrique Medina Gremaldos <lliurex_devel4@edu.gva.es>
+Copyright: Copyright © 2020 Enrique Medina Gremaldos <quiqueiii@gmail.com>
 License: GPL-3+
  
 License: GPL-3+
