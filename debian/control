@@ -9,7 +9,6 @@ Standards-Version: 4.1.2
  
 Package: robolliurex
 Architecture: any
-Pre-Depends: multiarch-support
 Depends: ${shlibs:Depends}, ${misc:Depends}, nqc
 Description: Lego RCX educational software
  Robolliurex is a software which allows to use classic Lego RCX brick in an
