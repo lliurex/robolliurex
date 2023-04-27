@@ -5,8 +5,9 @@
 #include "robolliurex.h"
 
 
-#include <lsf-1.0/system.hpp>
-#include <lsf-1.0/filesystem.hpp>
+#include <system.hpp>
+#include <filesystem.hpp>
+
 #include <gtk/gtk.h>
 
 #include <pthread.h>
@@ -115,7 +116,7 @@ void RoboCore::Init()
 	vector<string> modules;
 	
 	//ask lsf for current kernel modules
-	modules=system::GetModuleList(); 
+	modules=edupals::system::modules();
 	
 	usb_tower=false;
 	
@@ -133,7 +134,7 @@ void RoboCore::Init()
 		clog<<"* Found Lego USB tower"<<endl;
 		comm_port = RBC_PORT_USB;
 		
-		vector<string> towers = filesystem::List("/dev/usb/legousbtower*");
+		auto towers = edupals::filesystem::glob("/dev/usb/legousbtower*");
 		
 		if(towers.size()==0)
 		{
@@ -141,9 +142,9 @@ void RoboCore::Init()
 		}
 		else
 		{
-			string usbp="usb:"+towers[0];
+			string usbp="usb:"+towers[0].native();
 			RoboCore::comm_name[comm_port]=usbp;
-			clog<<"Using tower device: "<<towers[0]<<endl;
+			clog<<"Using tower device: "<<towers[0].native()<<endl;
 		}
 		
 	}

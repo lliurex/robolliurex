@@ -1,7 +1,6 @@
 
 
 #include "robopilot.h"
-#include <lsf-1.0/filesystem.hpp>
 
 #include <gtk/gtk.h>
 
@@ -621,9 +620,9 @@ void PilotSave(GtkDialog * dialog,gint r_id,gpointer data)
 		char * filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (dialog));
 		string path(filename);
 		g_free(filename);
-		
-		string base_path=filesystem::DirName(path);
-		string base_name=filesystem::BaseName(path);
+		std::size_t found = path.find_last_of("/");
+		string base_path = path.substr(0,found);
+		string base_name = path.substr(found + 1);
 		
 		if(base_name.length()<4)
 		{

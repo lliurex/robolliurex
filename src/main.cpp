@@ -11,7 +11,6 @@
 #include <cairo.h>
 #include <lgi-1.0/x11window.hpp>
 #include <lgi-1.0/layer.hpp>
-#include <lsf-1.0/utils.hpp>
 
 #include <gtk/gtk.h>
  
